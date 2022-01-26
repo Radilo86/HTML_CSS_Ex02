@@ -1,0 +1,68 @@
+<!-- Ejercicio sesión 2
+Crea un formulario en el que haya que introducir los siguientes datos: 
+	Nombre, Apellido, e-mail, teléfono y dirección.
+
+Como segunda parte del ejercicio deberás crear una tabla, 
+esta tabla tendrá 4 columnas y 4 filas, en esta tabla deberás hacer que:
+	* Una de las celdas ocupe dos columnas.
+	* Una de las celdas ocupe dos filas. -->
+	
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Ejercicio2</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form id="form1" method="post" action="direccion donde va a parar la info del formulario">
+		<h1>FORMULARIO 1</h1>
+		<fieldset>
+			<legend>Introduce aqui los datos: </legend>
+			<div>
+				<input id="nombre" required type="text" placeholder="Introduce el nombre (entre 4 y 10 caracteres)"
+					minlenght="4" maxlength="10" size="35"/>
+				<br>
+				<input id="apellido" required type="text" placeholder="Introduce el apellido" maxlength="60"/>
+				<br>
+				<input id="email" required type="email" placeholder="Introduce el email" pattern=".+@+.+."/>
+				<br>
+				<input id="telefono" required type="text" placeholder="Introduce el telefono" 
+					minlenght="9" maxlength="9" pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" />
+				<br>
+				<input id="direccion" required type="text" placeholder="Introduce la calle" maxlength="80" size="40"/> Nº:
+				<input id="direccion2" required type="number" placeholder="Introduce el numero" maxlength="80" size="10"/>
+				<br>
+				<textarea id="observaciones" placeholder="Escribe aqui"> </textarea>
+			</div>
+		
+			<div>
+				<br>
+				<input type="submit" value="Enviar"/>
+			</div>
+			
+		</fieldset>
+	</form>
+	<br>
+	<br>
+	
+	<table border="1px">
+		<tr>
+			<th colspan="2">A</th>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<th>B</th>
+			<td>4</td>
+			<td>5</td>
+			<td rowspan="2">6</td>
+		</tr>
+		<tr>
+			<th>C</th>
+			<td>7</td>
+			<td>8</td>
+		</tr>
+	</table>
+	
+</body>
+</html>
